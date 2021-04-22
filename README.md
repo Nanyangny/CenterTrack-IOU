@@ -59,7 +59,7 @@ the same tracklet lifetime.
 ### Ablative studies on tracked size prediction method
 
 #### Tracking_wh
-| Association Method |  IDF1­  | MOTA­  | IDs | FP(%) | FN(%) |
+| Association Method |  IDF1  | MOTA | IDs | FP(%) | FN(%) |
 |:------------------:|:--------:|:--------:|:---:|:-----:|:-----:|
 |         DIS        |  69.2 |  66.2 | 219 |  3.9  |  29.5 |
 |         IOU        |  71.1 |  66.7 | 204 |  3.6  |  29.3 |
@@ -69,7 +69,7 @@ the same tracklet lifetime.
 
 
 #### Tracking_ltrb
-| Association Method |  IDF1­  | MOTA­ | IDs | FP(%) | FN(%) |
+| Association Method |  IDF1  | MOTA| IDs | FP(%) | FN(%) |
 |:------------------:|:--------:|:--------:|:---:|:-----:|:-----:|
 |         DIS        | 69.2  | 66.2  | 219 | 3.9   | 29.5  |
 |         IOU        | 72.4  | 66.7  | 191 | 3.8   | 29.2  |
