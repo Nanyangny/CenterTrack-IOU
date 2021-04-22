@@ -1,9 +1,9 @@
-# Tracking Objects as Points
-New association method based on CenterTrack
+# MOT Tracked object bounding box association
+New association method based on CenterTrack. Two new branches (Tracked Size and IOU) are added onto the original CenterTrack tracker.
 
 <p align="center"> <img src='readme/CenterTrack++.png' align="center" width="500px"> </p>
 
-The bottom two branches (Tracked Size and IOU) are added onto the original CenterTrack tracker.
+
 
 
 
