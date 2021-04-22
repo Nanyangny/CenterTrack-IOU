@@ -1,6 +1,11 @@
 # Tracking Objects as Points
 New association method based on CenterTrack
-![](readme/CenterTrack++.png)
+
+<p align="center"> <img src='readme/CenterTrack++.png' align="center" height="70%"> 
+The bottom two branches (Tracked Size and IOU) are added onto the original CenterTrack tracker
+
+</p> 
+
 
 
 ## Abstract
@@ -73,15 +78,11 @@ the same tracklet lifetime.
 
 
 
-<p align="center"> <img src='readme/coco_det.gif' align="center" height="230px"> </p> 
-
-<p align="center"> <img src='readme/coco_pose.gif' align="center" height="230px"> </p>
-
 
 
 ## Installation
 
-Please refer to [INSTALL.md](readme/INSTALL.md) for installation instructions.
+Please refer to [INSTALL.md](https://github.com/xingyizhou/CenterTrack/blob/master/readme/INSTALL.md) for installation instructions.
 
 ## Training and Evaluation
 - Download the crowdhuman pretrained model from xinyizhou/CenterTrack [MODEL ZOO.md](https://github.com/xingyizhou/CenterTrack/blob/master/readme/MODEL_ZOO.md) to models
@@ -109,7 +110,7 @@ sh experiments/mot17full.sh
 
 #### Object exiting the frame
 <p align="left"> <img src='readme/MOT17-05-2-DIS.gif' align="left" height="230px"> </p> 
-<p align="right"> <img src='readme/MOT-05-2-IOU.gif' align="right" height="230px"> </p> 
+<p align="right"> <img src='readme/MOT17-05-2-IOU.gif' align="right" height="230px"> </p> 
 
 
 # Acknowledgement
