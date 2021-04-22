@@ -105,13 +105,17 @@ sh experiments/mot17full.sh
 
 ## Demo comparison
 
-#### Occlusion case
-<p align="left"> <img src='readme/MOT_DIS.gif' align="left" height="230px"> </p> 
-<p align="right"> <img src='readme/MOT_IOU.gif' align="right" height="230px"> </p> 
+#### Occlusion case 
+<p>
+<img src='readme/MOT_DIS.gif' align="left" height="200px"> 
+<img src='readme/MOT_IOU.gif'  height="230px"></p>
+
 
 #### Object exiting the frame
-<p align="left"> <img src='readme/MOT17-05-2-DIS.gif' align="left" height="230px"> </p> 
-<p align="right"> <img src='readme/MOT17-05-2-IOU.gif' align="right" height="230px"> </p> 
+<p>
+<img src='readme/MOT17-05-2-DIS.gif' align="left" height="230px">
+<img src='readme/MOT17-05-2-IOU.gif'  height="230px">
+</p>
 
 
 # Acknowledgement
