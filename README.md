@@ -1,9 +1,10 @@
-# Tracking Objects as Points
-New association method based on CenterTrack
+# MOT Tracked object bounding box association
+New association method based on CenterTrack. Two new branches (Tracked Size and IOU) are added onto the original CenterTrack tracker.
 
-<p align="center"> <img src='readme/CenterTrack++.png' align="center" height="70%"> 
-The bottom two branches (Tracked Size and IOU) are added onto the original CenterTrack tracker
-</p> 
+<p align="center"> <img src='readme/CenterTrack++.png' align="center" width="500px"> </p>
+
+
+
 
 
 
@@ -42,11 +43,11 @@ the same tracklet lifetime.
 
 ### Comparison with other SOTA tracker on MOT17 test set
 
-|       Tracker      | Association Features | MOTA­ | IDF1­ |  IDs |
-|:------------------:|:--------------------:|:-----:|:-----:|:----:|
+|       Tracker      | Association Features | MOTA | IDF1 |  IDs |
+|:------------------:|:--------------------:|:-------:|:-------:|:----:|
 |       TubeTK       |           S          |   63  |  58.6 | 4137 |
 |     CenterTrack    |           S          |  67.8 |  64.7 | 3039 |
-| Ours:CenterTrack++ |           S          |  68.1 |  66.2 | 2352 |
+| Ours               |           S          |  68.1 |  66.2 | 2352 |
 |         SST        |           A          |  52.4 |  49.5 | 8431 |
 |     CTrackerV1     |          S+A         |  66.6 |  57.4 | 5529 |
 |        DEFT        |          S+A         |  66.6 |  65.4 | 2823 |
@@ -57,8 +58,8 @@ the same tracklet lifetime.
 ### Ablative studies on tracked size prediction method
 
 #### Tracking_wh
-| Association Method | IDF1­ | MOTA­ | IDs | FP(%) | FN(%) |
-|:------------------:|:-----:|:-----:|:---:|:-----:|:-----:|
+| Association Method |  IDF1  | MOTA | IDs | FP(%) | FN(%) |
+|:------------------:|:--------:|:--------:|:---:|:-----:|:-----:|
 |         DIS        |  69.2 |  66.2 | 219 |  3.9  |  29.5 |
 |         IOU        |  71.1 |  66.7 | 204 |  3.6  |  29.3 |
 |      Combined      |  70.9 |  66.2 | 233 |  3.9  |  29.6 |
@@ -67,8 +68,8 @@ the same tracklet lifetime.
 
 
 #### Tracking_ltrb
-| Association Method | IDF1­ | MOTA­ | IDs | FP(%) | FN(%) |
-|:------------------:|:-----:|:-----:|:---:|:-----:|:-----:|
+| Association Method |  IDF1  | MOTA| IDs | FP(%) | FN(%) |
+|:------------------:|:--------:|:--------:|:---:|:-----:|:-----:|
 |         DIS        | 69.2  | 66.2  | 219 | 3.9   | 29.5  |
 |         IOU        | 72.4  | 66.7  | 191 | 3.8   | 29.2  |
 |      Combined      | 70.8  | 66.5  | 236 | 3.8   | 29.3  |
@@ -103,13 +104,17 @@ sh experiments/mot17full.sh
 
 ## Demo comparison
 
-#### Occlusion case
-<p align="left"> <img src='readme/MOT_DIS.gif' align="left" height="230px"> </p> 
-<p align="right"> <img src='readme/MOT_IOU.gif' align="right" height="230px"> </p> 
+#### Occlusion case 
+<p >
+<img src='readme/MOT_DIS.gif' align="left" height="230px"> 
+<img src='readme/MOT_IOU.gif'  height="230px"></p>
+
 
 #### Object exiting the frame
-<p align="left"> <img src='readme/MOT17-05-2-DIS.gif' align="left" height="230px"> </p> 
-<p align="right"> <img src='readme/MOT17-05-2-IOU.gif' align="right" height="230px"> </p> 
+<p>
+<img src='readme/MOT17-05-2-DIS.gif' align="left" height="230px">
+<img src='readme/MOT17-05-2-IOU.gif'  height="230px">
+</p>
 
 
 # Acknowledgement
