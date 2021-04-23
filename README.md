@@ -1,8 +1,8 @@
-# MOT Tracked object bounding box association
-New association method based on CenterTrack. Two new branches (Tracked Size and IOU) are added onto the original CenterTrack tracker.
+# MOT Tracked object bounding box association (CenterTrack++)
+New association method based on CenterTrack. Two new branches (Tracked Size and IOU) are added onto the original CenterTrack tracker. The proposed method enables the computation of IOU distance matrix for more accurate object association compared to single displacement offset in the original CenterTrack.
 
-<p align="center"> <img src='readme/CenterTrack++.png' align="center" width="500px"> </p>
-
+<p align="center"> <img src='readme/CenterTrack++.png' align="center" width="250px"></p>
+<p align="center">Modification to CenterTrack method, image modified from [CenterTrack](https://github.com/xingyizhou/CenterTrack)</p>
 
 
 
@@ -34,14 +34,39 @@ significantly by 22.6% and obtain a notable improvement of
 the same tracklet lifetime.
 
 
+
+
 ## Main Contributions
 
 - Proposed two branches (tracked box size and IOU)on top of the existing CenterTrack method for IOU distance metric computation in object association
 - Evaluation the proposed method on MOT17 dataset and obtain significant reduction in IDs and notable improvements in tracking accuracy score
 
+## Two new branches
+The idea of the proposed method is to enhance the original displacement only association. Inspired by the IOU distance in [SORT](https://arxiv.org/abs/1602.00763) and [IOU-Tracker](http://elvera.nue.tu-berlin.de/files/1517Bochinski2017.pdf), IOU distance can be used for more accurate object association across frames. IOU distance is calculated as `1 - IOU`(bounding box of detected object in the previous frame and the predicted tracked object bounding box in the previous frame based on the current frame)
+
+### Tracked Object Size prediction
+In order to obtain the IOU distance, the bounding box of the tracked object in the previous frame should be learnt. In this project, two methods were used to learn the tracked bounding box. 
+
+**Tracking_wh:** Directly learn the width and height of the tracked object bounding box in the previous frame.
+
+**Tracking_ltrb:** Learn the offsets of the left, top, right and bottom of bounding box from the tracked object center in the previous frame.
+
+<p align="center"> <img src='readme/tracking_size.png' align="center" width="250px"> </p>
+<p align="center">The tracking_wh(left) and tracking_ltrb(right) approach illustration.</p>
+
+### IOU prediction
+To further suppress inaccurate association, the IOU value of the tracked object bounding box in adjacent frames is learnt to provide a threshold to filter unlikely associations. We would set the IOU distance to infinity if  `IOU distance > IOU`.
+
+## Association Method
+<p align="center"> <img src='readme/Updated_overall.png' align="center" width="500px"> </p>
+
+
+
+
 ## Main results
 
 ### Comparison with other SOTA tracker on MOT17 test set
+Note: S= Spatial features, A=appearance features
 
 |       Tracker      | Association Features | MOTA | IDF1 |  IDs |
 |:------------------:|:--------------------:|:-------:|:-------:|:----:|
@@ -105,17 +130,17 @@ sh experiments/mot17full.sh
 ## Demo comparison
 
 #### Occlusion case 
-<p >
+<p>
 <img src='readme/MOT_DIS.gif' align="left" height="230px"> 
 <img src='readme/MOT_IOU.gif'  height="230px"></p>
-
+<p> Original CenterTrack (left) vs CenterTrack++ (right)</p>
 
 #### Object exiting the frame
 <p>
 <img src='readme/MOT17-05-2-DIS.gif' align="left" height="230px">
 <img src='readme/MOT17-05-2-IOU.gif'  height="230px">
 </p>
-
+<p> Original CenterTrack (left) vs CenterTrack++ (right)</p>
 
 # Acknowledgement
 
