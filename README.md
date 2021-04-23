@@ -2,7 +2,7 @@
 New association method based on CenterTrack. Two new branches (Tracked Size and IOU) are added onto the original CenterTrack tracker. The proposed method enables the computation of IOU distance matrix for more accurate object association compared to single displacement offset in the original CenterTrack.
 
 <p align="center"> <img src='readme/CenterTrack++.png' align="center" width="250px"></p>
-<p align="center">Modification to CenterTrack method, image modified from [CenterTrack](https://github.com/xingyizhou/CenterTrack)</p>
+<p align="center">Modification to CenterTrack method, image modified from <a href="https://github.com/xingyizhou/CenterTrack">CenterTrack</a></p>
 
 
 
