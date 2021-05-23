@@ -120,12 +120,14 @@ sh experiments/mot17val_tracking_wh.sh
 
 sh experiments/mot17val_tracking_ltrb.sh
 ```
+The trained model on MOT17val dataset using two approach are available in google drive, [tracking_ltrb_70val.pth](https://drive.google.com/file/d/1mECRdz8EQq_BgVCxAdMBmBUPREIQ8Zjd/view?usp=sharing), [tracking_wh_70val.pth](https://drive.google.com/file/d/1_R7OPQ7PJlOVAH80BS2iaIofv5ZNXXuq/view?usp=sharing).
 
 - Train on full mot17 training set and run model on the test set for evaluation
 
 ```bash
 sh experiments/mot17full.sh
 ```
+The trained models on full MOT17 dataset using ltrb approach is available in the [google drive](https://drive.google.com/file/d/1bgnA9ApYwt7D20OBunp0807Kz8ageBOm/view?usp=sharing).
 
 ## Demo comparison
 
