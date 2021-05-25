@@ -147,3 +147,16 @@ The trained models on full MOT17 dataset using ltrb approach is available in the
 # Acknowledgement
 
 A large part of the code is adapted from [xingyizhou/CenterTrack](https://github.com/xingyizhou/CenterTrack), thanks for their wonderful inspiration.
+
+# Citation
+
+If you find this paper and code useful in your research, please cite our papers.
+
+```@misc{yang2021multiobject,
+      title={Multi-object Tracking with Tracked Object Bounding Box Association}, 
+      author={Nanyang Yang and Yi Wang and Lap-Pui Chau},
+      year={2021},
+      eprint={2105.07901},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}```
