@@ -153,5 +153,9 @@ A large part of the code is adapted from [xingyizhou/CenterTrack](https://github
 If you find this paper and code useful in your research, please cite our papers.
 
 ```
-@INPROCEEDINGS{9455993,  author={Yang, Nanyang and Wang, Yi and Chau, Lap-Pui},  booktitle={2021 IEEE International Conference on Multimedia   Expo Workshops (ICMEW)},   title={Multi-Object Tracking with Tracked Object Bounding Box Association},   year={2021},  volume={},  number={},  pages={1-6},  doi={10.1109/ICMEW53276.2021.9455993}}
+@INPROCEEDINGS{9455993,  
+author={Yang, Nanyang and Wang, Yi and Chau, Lap-Pui},  
+booktitle={2021 IEEE International Conference on Multimedia   Expo Workshops (ICMEW)},   
+title={Multi-Object Tracking with Tracked Object Bounding Box Association},   
+year={2021},  volume={},  number={},  pages={1-6},  doi={10.1109/ICMEW53276.2021.9455993}}
 ```
